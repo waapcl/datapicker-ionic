@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Data-picker
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card no-margin>
+        <ion-card-header no-padding padding-top padding-start>
+            <ion-card-title>Calendario de entrega</ion-card-title>
+        </ion-card-header>
+        <ion-card-content no-padding>
+            <form [formGroup]="dataForm" novalidate class="dp-reactive-form" (submit)="onClickSubmit()">
+                <ion-grid>
+                    <ion-row>
+                        <ion-col size="12">
+                            <ion-item>
+                                <ion-label position="floating">Desde</ion-label>
+                                <!--                                 <ion-input readonly [liIonic4Datepicker]="datePickerObj" type="text" formControlName="date" (ionChange)="onChangeDate('date')"></ion-input>
+ -->
+                                <ion-input readonly [liIonic4Datepicker]="datePickerObj" type="text" formControlName="date" (ionChange)="onChangeDate($event)"></ion-input>
+
+                            </ion-item>
+                        </ion-col>
+                        <ion-col size="12">
+                            <ion-item>
+                                <ion-label position="floating">Hasta</ion-label>
+                                <ion-input readonly [liIonic4Datepicker]="datePickerObj" type="text" formControlName="hasta" (ionChange)="onChangeDate($event)"></ion-input>
+                            </ion-item>
+                        </ion-col>
+                        <ion-col size="12">
+                            <ion-button type="submit" shape="round" expand="full" [disabled]="dataForm.invalid">Enviar</ion-button>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </form>
+            <ion-card-subtitle *ngIf="dias_entrega>1" class="dias-diferencia">{{ dias_entrega }} días de Despacho</ion-card-subtitle>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
