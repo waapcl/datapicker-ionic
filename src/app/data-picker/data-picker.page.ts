@@ -34,55 +34,25 @@ export class DataPickerPage implements OnInit {
     const disabledDates: Date[] = [
       new Date(1545911005644),
       new Date(),
-      new Date(2018, 12, 12), // Months are 0-based, this is August, 10th.
-      new Date('Wednesday, December 26, 2018'), // Works with any valid Date formats like long format
-      new Date('12-14-2018'), // Short format
+      new Date(2018, 12, 12),
+      new Date('Wednesday, December 26, 2018'), 
+      new Date('12-14-2018'), 
     ];
 
     this.datePickerObj = {
-      // inputDate: new Date('12'), // If you want to set month in dateObject of date-picker
-      // inputDate: new Date('2018'), // If you want to set year in dateObject of date-picker
-      // inputDate: new Date('2018-12'), // If you want to set year & month in dateObject of date-picker
-      // inputDate: new Date('2018-12-01'), // If you want to set date in dateObject of date-picker
-      // inputDate: '1', // If you want to set date as a string in date-picker
-      // inputDate: '2018', // If you want to set date as a string in date-picker
-      // inputDate: '2018-12', // If you want to set date as a string in date-picker
-      // inputDate: '2018-12-12', // If you want to set date as a string in date-picker
-      // inputDate: moment(new Date('12')), // If you want to set date as a moment object in date-picker
-      // inputDate: moment(new Date('2018')), // If you want to set date as a moment object in date-picker
-      // inputDate: moment(new Date('2018-12')), // If you want to set date as a moment object in date-picker
-      // inputDate: moment(new Date('2018-12-12')), // If you want to set date as a moment object in date-picker
-
-      // fromDate: new Date('2019-03-05'), // need this in order to have toDate
-      // toDate: new Date('2019-03-28'),
-      // showTodayButton: false,
-      // closeOnSelect: true,
-      // disableWeekDays: [],
-      // mondayFirst: true,
-      // setLabel: 'Select a Date',
        setLabel: 'Hecho',
-      // todayLabel: 'Today',
        todayLabel: 'Hoy',
-      // closeLabel: 'Close',
        closeLabel: 'Cancelar',
-      // disabledDates: [],
-      // titleLabel: 'Select a Date',
        monthsList: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
        weeksList: ['D', 'L', 'M', 'M', 'J', 'V', 'S'],
       dateFormat: 'YYYY-MM-DD',
-      // clearButton: false,
-      // momentLocale: 'pt-BR',
-      // yearInAscending: true,
-      // btnCloseSetInReverse: true,
-
       btnProperties: {
-        expand: 'block', // "block" | "full"
-        fill: '', // "clear" | "default" | "outline" | "solid"
-        size: '', // "default" | "large" | "small"
-        disabled: '', // boolean (default false)
-        strong: '', // boolean (default false)
+        expand: 'block', 
+        fill: '', 
+        size: '', 
+        disabled: '',
+        strong: '', 
         color: ''
-        // "primary", "secondary", "tertiary", "success", "warning", "danger", "light", "medium", "dark" , and give color in string
       }
     };
   }
